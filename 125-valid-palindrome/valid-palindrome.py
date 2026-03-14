@@ -1,6 +1,5 @@
-class Solution(object):
-    def isPalindrome(self, s):
-        s = ("".join(c for c in s if c.isalnum())).lower()
-        r = s[::-1].lower()
-        return r == s
-        
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        m = ("".join(char for char in s if char.isalnum())).lower()
+        s = m[::-1]
+        return s == m

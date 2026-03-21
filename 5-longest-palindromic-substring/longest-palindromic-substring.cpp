@@ -16,8 +16,8 @@ public:
         };
 
         for (int i = 0; i < n; i++) {
-            expand(i, i);     // Odd-length palindromes
-            expand(i, i + 1); // Even-length palindromes
+            expand(i, i);     
+            expand(i, i + 1); 
         }
 
         return s.substr(start, maxLen);

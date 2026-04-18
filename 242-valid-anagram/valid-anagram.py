@@ -4,7 +4,7 @@ class Solution:
         if len(s) != len(t):
             return False
         
-        for char in t:
+        for char in set(t):
             if t.count(char) != s.count(char):
                 return False
         return True

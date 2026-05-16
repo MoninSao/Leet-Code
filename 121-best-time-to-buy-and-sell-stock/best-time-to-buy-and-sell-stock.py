@@ -3,11 +3,11 @@ class Solution:
         lowest = prices[0]
         profit = 0
         output = []
-
-        for price in prices:
-            if price < lowest:
-                lowest = price
-            profit = price - lowest
+        for i, prc in enumerate(prices):
+            if prc < lowest:
+                lowest = prc 
+            profit = prc - lowest
             output.append(profit)
 
         return max(output)
+            

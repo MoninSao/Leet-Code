@@ -1,9 +1,9 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        lowest = prices[0]
-        profit = 0
         profit_list = []
-        
+        profit = 0
+        lowest = prices[0]
+
         for price in prices:
             if price < lowest:
                 lowest = price
@@ -11,4 +11,3 @@ class Solution:
             profit_list.append(profit)
 
         return max(profit_list)
-        

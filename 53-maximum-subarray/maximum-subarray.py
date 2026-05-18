@@ -5,14 +5,9 @@ class Solution:
 
         for num in nums:
             if curSum < 0:
-                curSum = 0 
+                curSum = 0
             curSum += num
             maxSub = max(maxSub, curSum)
 
         return maxSub
-        
-
-
-
-
         

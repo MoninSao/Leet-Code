@@ -1,11 +1,8 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         group = {}
-        
-        group = Counter(nums)
-           
+        for num in set(nums):
+            group[num] = nums.count(num)
 
-        sorted_nums = sorted(group, key=lambda x: group[x], reverse = True)
-
-
-        return sorted_nums[:k]
+        sort_group = sorted(group, key = lambda x: group[x] , reverse = True)
+        return (sort_group[:k])
